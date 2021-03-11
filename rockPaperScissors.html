@@ -22,9 +22,9 @@
         <script>
             const input = document.querySelector('.numberInput');
             const para = document.querySelector('p');
-            const button = document.querySelector('button')
+            const button = document.querySelector('button');
 
-            let computerHand
+            let computerHand;
 
             function computerPlay() {
                 let choice = Math.floor(Math.random() * 3) + 1;
@@ -60,8 +60,10 @@
                     para.textContent = "Computer chose paper, it's a tie!"
                 } else if (computerHand == 'rock' && userHand == 'rock') {
                     para.textContent = "Computer chose rock, it's a tie!"
-                } else
+                } else if (computerHand == 'scissors' && userHand == 'scissors') {
                     para.textContent = "Computer chose scissors, it's a tie!"
+                } else
+                    para.textContent = "Please enter rock, paper, or scissors"
             }
 
         </script>
